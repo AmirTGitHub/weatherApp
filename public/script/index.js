@@ -10,13 +10,15 @@ function getLocation() {
     x.innerText = "Geolocation is not supported by this browser.";
   }
 }
+
 function getWeather(position) {
   const { latitude, longitude } = position.coords;
-  console.log(latitude);
+  if (latitude === null) {
+    event.waitUntil(latitude !== null);
+  }
   document.getElementById("lat").value = latitude;
   document.getElementById("lon").value = longitude;
 }
-
 const dateInPage = document.querySelectorAll(".date");
 dateInPage.map(item => {
   const date = new Date(item.innerText).toString();
