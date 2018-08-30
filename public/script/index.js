@@ -1,9 +1,6 @@
 NodeList.prototype.map = Array.prototype.map;
 
-let confirm = window.confirm("we use your location to find the weather");
-if (confirm) {
-  getLocation();
-}
+
 
 //get the location
 document.addEventListener("load", getLocation());
@@ -63,14 +60,14 @@ search.addEventListener("click", event => {
 
 //registering service workers to the page
 
-(function() {
+(function () {
   if ("serviceWorker" in navigator) {
     console.log("service worker registration in progress.");
     navigator.serviceWorker.register("service-worker.js").then(
-      function() {
+      function () {
         console.log("service worker registration complete.");
       },
-      function() {
+      function () {
         console.log("service worker registration failure.");
       }
     );
