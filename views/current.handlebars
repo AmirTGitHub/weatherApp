@@ -1,0 +1,19 @@
+<div class="weather current">
+    {{#if location}}
+    <h2 class="title" id="title">{{location}}</h2>
+    <div class="container" id="container">
+        <div class="card">
+            <div class='content '>
+                <div class="icon">
+                    <span class="hide">{{main}}</span>
+                    <img src="/icon/Rainy.png" class="image" />
+                </div>
+                <h3 class="main"> {{temperature}}&deg;C</h3>
+                <p class="description">{{description}}</p>
+                <small>{{dt}}</small>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+
+</div>
