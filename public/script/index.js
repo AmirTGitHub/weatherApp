@@ -6,7 +6,7 @@ NodeList.prototype.map = Array.prototype.map;
 document.addEventListener("load", getLocation());
 
 let x = document.getElementById("title");
-
+let submit = document.getElementById('submit')
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getWeather);
@@ -17,6 +17,9 @@ function getLocation() {
 
 function getWeather(position) {
   const { latitude, longitude } = position.coords;
+  if (latitude === 0) {
+    submit.disable = true
+  }
   document.getElementById("lat").value = latitude;
   document.getElementById("lon").value = longitude;
 }
