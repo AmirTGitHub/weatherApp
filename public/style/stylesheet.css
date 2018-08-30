@@ -1,127 +1,140 @@
-body{
-	font-family: 'Lato', sans-serif;
-	min-height:100%;
-	overflow-x: hidden;
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
-.weather{
-	min-height: 800px;
-	width:110%;
-	height: 130%;
-	background: -moz-linear-gradient(top, rgba(157,210,231,1) 0%, rgba(90,197,237,1) 0%, rgba(157,210,231,1) 100%);
-	background: linear-gradient(to bottom, rgba(157,210,231,1) 0%, rgba(90,197,237,1) 0%, rgba(157,210,231,1) 100%);
-	
+.weather {
+  min-height: 800px;
+  width: 100vw;
+  height: 100vh;
+  background: -moz-linear-gradient(
+    top,
+    rgba(157, 210, 231, 1) 0%,
+    rgba(90, 197, 237, 1) 0%,
+    rgba(157, 210, 231, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(157, 210, 231, 1) 0%,
+    rgba(90, 197, 237, 1) 0%,
+    rgba(157, 210, 231, 1) 100%
+  );
 }
-.formContent{
-	padding-top: 40px;
+.current {
+  margin-top: -40px;
 }
-.city{
-    width: 42%;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0px 0px 4px;
-	box-sizing: border-box;
-	font-size: 1em
+.formContent {
+  padding-top: 40px;
 }
-
-.btn{
-	font-family: 'Lato', sans-serif;
-    width: 8%;
-    background-color: #2a4c84;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-	font-size: 1em;
-	transition: all 0.4s;	
-}
-.btn:hover , .btn:disabled {
-	background-color: #b4cdf7;
-	color: #2a4c84
+.city {
+  width: 42%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  box-sizing: border-box;
+  font-size: 1em;
 }
 
-.search{
-    border-radius: 0px 4px 4px 0px;
+.btn {
+  font-family: "Lato", sans-serif;
+  width: 8%;
+  background-color: #2a4c84;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  font-size: 1em;
+  transition: all 0.4s;
+}
+.btn:hover,
+.btn:disabled {
+  background-color: #b4cdf7;
+  color: #2a4c84;
 }
 
-.location{
-	width:40%;
-}
-.centre{
-	display: flex;
-	justify-content: center
+.search {
+  border-radius: 0px 4px 4px 0px;
 }
 
-.container{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	padding-bottom: 200px;
+.location {
+  width: 80%;
 }
-.card{
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	width: 8em;
-	height: 16em;
-	margin: 40px;
-	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.43);
-	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.43);
-	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.43);
-	text-align:center;
-}
-.content{
-	margin:0 auto
-}
-.image{
-	width:4em;
-}
-.icon{
-	margin-top:10px;
-	height:70px
-}
-.hide{
-	display: none
-}
-.title{
-	color: #fff;
-	text-align: center;
-	font-size: 2em;
-	text-transform: capitalize
-}
-.main{
-	text-transform: uppercase;
-	font-size: 1.4em
+.centre {
+  display: flex;
+  justify-content: center;
 }
 
-.error{
-	margin:0 auto;
-	width: 40%;
-	border: rgb(0, 15, 99) dashed 1px
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 200px;
 }
-.errorColor{
-	color:black
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 8em;
+  height: 16em;
+  margin: 40px;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.43);
+  text-align: center;
+}
+.content {
+  margin: 0 auto;
+}
+.image {
+  width: 4em;
+}
+.icon {
+  margin-top: 10px;
+  height: 70px;
+}
+.hide {
+  display: none;
+}
+.title {
+  padding-top: 40px;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  text-transform: capitalize;
+}
+.main {
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.error {
+  margin: 0 auto;
+  width: 40%;
+  border: rgb(0, 15, 99) dashed 1px;
+}
+.errorColor {
+  color: black;
 }
 
 @media screen and (max-width: 600px) {
-	body{
-		overflow-x: hidden
-	}
-	.weather{
-		width:100%;
-	}
+  body {
+    overflow-x: hidden;
+  }
+  .weather {
+    width: 100%;
+  }
 
-	.container{
-		padding:0
-	}
-	.city{
-		width: 50%;
-	}
-	.search{
-		width: 30%;
-	}
-	.location{
-		width: 50%;
-	}
-
+  .container {
+    padding: 0;
+  }
+  .city {
+    width: 50%;
+  }
+  .search {
+    width: 30%;
+  }
+  .location {
+    width: 50%;
+  }
 }

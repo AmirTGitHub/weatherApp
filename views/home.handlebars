@@ -1,11 +1,16 @@
 <div class="weather">
     <form action='/?city' method="get" class="formContent centre">
-        <input name='city' class='city' type='text' placeholder="enter a city name" />
-        <input type="submit" value="serch" class="btn search">
+        <input id='city' name='city' class='city' type='text' placeholder="enter a city name" />
+        <input type="submit" id="search" value="search" class="btn search">
     </form>
-    <h2 class="title" id="city">{{city}}</h2>
+    <h2 class="title" id="title">{{city}}</h2>
     <div class="centre">
-        <button onclick="getLocation()" class="btn location" id="btn"> get the weather for your current location</button>
+        <form action="/current" class="centre" method="POST" id="form">
+            <input class="hide" value="" id="lat" name="lat">
+            <input class="hide" value="" id="lon" name="lon">
+            <button class="btn location" id='submit'> get the weather for your current location
+            </button>
+        </form>
         {{#if data}}
     </div>
     <div id="geo" class="centre"></div>
