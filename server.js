@@ -16,7 +16,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //all the routing happened in the router folder in index.js file
-app.use('/api', routes)
+app.use('/', routes)
 
 
 const port = process.env.PORT || 3535
