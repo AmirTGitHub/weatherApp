@@ -4,7 +4,6 @@ body {
   margin: 0 auto;
 }
 .weather {
-  min-height: 800px;
   width: 100vw;
   height: 100vh;
   background: -moz-linear-gradient(
@@ -117,12 +116,13 @@ body {
   color: black;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
   }
   .weather {
-    width: 100%;
+    width: 100vw;
+    height: 2000px;
   }
 
   .container {

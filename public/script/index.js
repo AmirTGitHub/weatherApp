@@ -1,8 +1,15 @@
 NodeList.prototype.map = Array.prototype.map;
 
+let confirm = window.confirm("we use your location to find the weather");
+if (confirm) {
+  getLocation();
+}
+
 //get the location
 document.addEventListener("load", getLocation());
+
 let x = document.getElementById("title");
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getWeather);
@@ -13,12 +20,11 @@ function getLocation() {
 
 function getWeather(position) {
   const { latitude, longitude } = position.coords;
-  if (latitude === null) {
-    event.waitUntil(latitude !== null);
-  }
   document.getElementById("lat").value = latitude;
   document.getElementById("lon").value = longitude;
 }
+
+// change the date to show just the abbreviation of the date
 const dateInPage = document.querySelectorAll(".date");
 dateInPage.map(item => {
   const date = new Date(item.innerText).toString();
@@ -44,6 +50,7 @@ imageComponent.map(item => {
   });
 });
 
+// ad the validation to the search key
 const search = document.getElementById("search");
 const city = document.getElementById("city");
 
