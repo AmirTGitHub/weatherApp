@@ -19,10 +19,22 @@ router.get("/?", async (req, res) => {
   try {
     const weather = await fetch(url, getConfig);
     const data = await weather.json();
+
     if (data.cod === "200") {
+      // get everyday data not every three houres
       const days = [];
       data.list.map((item, index) => {
-        index % 8 === 0 && days.push(item);
+        if (index % 8 === 0) {
+          //safari doesn't accept the yyyy-MM-dd an it was showed the invalid date. 
+          //Now I move the frontend logic to the back-end
+          const date = new Date(item.dt_txt).toString();
+          const finalDate = date
+            .split(" ")
+            .slice(0, 3)
+            .join(" ");
+          item.dt_txt = finalDate
+          days.push(item)
+        }
       });
       res.render("home", { data: days, city });
     } else {

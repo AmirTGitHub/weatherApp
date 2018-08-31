@@ -24,16 +24,6 @@ function getWeather(position) {
   document.getElementById("lon").value = longitude;
 }
 
-// change the date to show just the abbreviation of the date
-const dateInPage = document.querySelectorAll(".date");
-dateInPage.map(item => {
-  const date = new Date(item.innerText).toString();
-  const finalDate = date
-    .split(" ")
-    .slice(0, 3)
-    .join(" ");
-  item.innerText = finalDate;
-});
 
 // Change the icon of the weather base on the weather
 const imageComponent = document.querySelectorAll(".icon");
@@ -63,18 +53,18 @@ search.addEventListener("click", event => {
 
 //registering service workers to the page
 
-(function () {
-  if ("serviceWorker" in navigator) {
-    console.log("service worker registration in progress.");
-    navigator.serviceWorker.register("service-worker.js").then(
-      function () {
-        console.log("service worker registration complete.");
-      },
-      function () {
-        console.log("service worker registration failure.");
-      }
-    );
-  } else {
-    console.log("service worker is not supported.");
-  }
-})();
+// (function () {
+//   if ("serviceWorker" in navigator) {
+//     console.log("service worker registration in progress.");
+//     navigator.serviceWorker.register("service-worker.js").then(
+//       function () {
+//         console.log("service worker registration complete.");
+//       },
+//       function () {
+//         console.log("service worker registration failure.");
+//       }
+//     );
+//   } else {
+//     console.log("service worker is not supported.");
+//   }
+// })();
