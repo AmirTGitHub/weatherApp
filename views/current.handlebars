@@ -1,4 +1,14 @@
-<div class="weather current">
+<div class="weather">
+    <div class="centre">
+        <form class="o-forms" method='get' action='/?city'>
+            <div class="o-forms__affix-wrapper">
+                <input id="text-suffix" type="text" class="o-forms__text" name="city" placeholder="enter a city name" id='city'>
+                <div class="o-forms__suffix">
+                    <input type="submit" id="search" value="search" class="o-buttons o-buttons--primary o-buttons--big" />
+                </div>
+            </div>
+        </form>
+    </div>
     {{#if location}}
     <h2 class="title" id="title">{{location}}</h2>
     <div class="container" id="container">
