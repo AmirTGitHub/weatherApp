@@ -4,17 +4,16 @@ const filesToCatch = [
   "/",
   "style/stylesheet.css",
   "script/index.js",
-  "icon/Cloudy.png",
-  "icon/Rainy.png",
-  "icon/Sunny.png",
+  "icon/Cloudy_w.png",
+  "icon/Rainy_w.png",
+  "icon/Sunny_w.png",
   "icon/logo_black.png",
-  "./"
 ];
 
 self.addEventListener("install", event => {
   console.log("WORKER: install event in progress.");
   event.waitUntil(
-    caches.open(catchName).then(function(cache) {
+    caches.open(catchName).then(function (cache) {
       return cache.addAll(filesToCatch);
     })
     //installation completed
@@ -40,7 +39,7 @@ self.addEventListener("fetch", event => {
           .then(function add(cache) {
             cache.put(event.request, cacheCopy);
           })
-          .then(function() {
+          .then(function () {
             console.log(
               "WORKER: fetch response stored in cache.",
               event.request.url
@@ -66,7 +65,7 @@ self.addEventListener("fetch", event => {
 self.addEventListener("activate", event => {
   console.log("WORKER: activate event in progress.");
   event.waitUntil(
-    caches.keys().then(function(keys) {
+    caches.keys().then(function (keys) {
       return Promise.all(
         keys
           .filter(key => {

@@ -42,10 +42,10 @@ imageComponent.map(item => {
   span.map(check => {
     if (check.innerText === "Clouds") {
       const icon = item.querySelectorAll(".image");
-      icon.map(photo => (photo.src = "/icon/Cloudy.png"));
+      icon.map(photo => (photo.src = "/icon/Cloudy_w.png"));
     } else if (check.innerText === "Clear") {
       const icon = item.querySelectorAll(".image");
-      icon.map(photo => (photo.src = "/icon/Sunny.png"));
+      icon.map(photo => (photo.src = "/icon/Sunny_w.png"));
     }
   });
 });
