@@ -39,7 +39,7 @@ router.post("/current", async (req, res) => {
   const lon = req.body.lon;
   try {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${appId}`;
-    const weather = await fetch(url);
+    const weather = await fetch(url, getConfig);
     const data = await weather.json();
     if (data.cod === "400") {
       res.render("error", { error: data.message });

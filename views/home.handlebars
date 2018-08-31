@@ -20,23 +20,22 @@
 
         {{#if data}}
     </div>
-    <div id="geo " class="centre "></div>
     <div class="container " id="container ">
 
 
         {{#each data}}
-        <div class="card ">
-            <div class='content '>
-                <div class="icon ">
+        <div class="card">
+            <div class="content">
+                <div class="icon">
                     {{#if main}}{{#each weather}}
-                    <span class="hide ">{{main}}</span>{{/each}}
-                    <img src="/icon/Rainy_w.png " class="image" alt="icon of the weather" /> {{/if}}
+                    <span class="hide">{{main}}</span>{{/each}}
+                    <img src="/icon/Rainy_w.png" class="image" alt="icon of the weather" /> {{/if}}
                 </div>
-                <h3 class="main "> {{main.temp}}&deg;C</h3>
+                <h3 class="main"> {{main.temp}}&deg;C</h3>
                 {{#each weather}}
-                <p class="description ">{{description}}</p>
+                <p class="description">{{description}}</p>
                 {{/each}}
-                <small class="date ">{{dt_txt}}</small>
+                <small class="date">{{dt_txt}}</small>
             </div>
         </div>
         {{/each}} {{/if}}
