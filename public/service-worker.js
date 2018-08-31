@@ -8,6 +8,10 @@ const filesToCatch = [
   "icon/Rainy_w.png",
   "icon/Sunny_w.png",
   "icon/logo_black.png",
+  "icon/logo_32.png",
+  "icon/logo_180.png",
+  "icon/logo_194.png"
+
 ];
 
 self.addEventListener("install", event => {
