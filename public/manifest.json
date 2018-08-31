@@ -1,0 +1,25 @@
+{
+    "name": "FT Weather app",
+    "short_name": "Wether app",
+    "icons": [
+        {
+            "src": "icon/logo_32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "images/logo_180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "images/logo_194.png",
+            "sizes": "194x194",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f2dfce",
+    "theme_color": "#f2dfce"
+}
